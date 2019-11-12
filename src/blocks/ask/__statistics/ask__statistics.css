@@ -1,0 +1,24 @@
+.ask__statistics {
+    max-width: 712px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .ask__statistics {
+        margin-top: 0px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .ask__statistics {
+        max-width: 288px;
+        margin-top: 0px;
+    }
+}

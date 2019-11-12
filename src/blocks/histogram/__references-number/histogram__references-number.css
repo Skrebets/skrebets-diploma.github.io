@@ -1,0 +1,22 @@
+.histogram__references-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1128px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-left: 104px;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram__references-number {
+        width: 571px;
+        margin-left: 110px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__references-number {
+        display: none;
+    }
+}

@@ -1,0 +1,55 @@
+@import url('./__active/ask__active.css');
+@import url('./__page/ask__page.css');
+@import url('./__references-number/ask__references-number.css');
+@import url('./__statistics/ask__statistics.css');
+@import url('./__title/ask__title.css');
+@import url('./__week-number/ask__week-number.css');
+@import url('./__week/ask__week.css');
+
+.ask {
+    max-width: 1440px;
+    height: 346px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 76px;
+    padding-left: 104px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media all and (min-width : 1000px) and (max-width: 1439px) {
+    .ask {
+        height: 300px;
+        padding-top: 32px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+    }
+}
+
+@media all and (min-width : 768px) and (max-width: 999px) {
+    .ask {
+        height: 270px;
+        padding-top: 32px;
+        padding-bottom: 36px;
+        padding-left: 40px;
+    }
+}
+
+@media all and (min-width : 500px) and (max-width: 767px) {
+    .ask {
+        height: 200px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 499px) {
+    .ask {
+        height: 176px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+    }
+}

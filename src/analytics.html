@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Евгений Скребцов">
+        <meta name="description" content="Аналитика по запросу с сайта News analyzer">
+        <title>News analyzer - аналитика</title>
+        <link rel="shortcut icon" href="<%=require('./images/favicon.png')%>" type="image/x-icon">
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+    </head>
+
+    <body class="body">
+        <main class="content">
+            <header class="header">
+                <p class="header__title header__title_black">NewsAnalyzer</p>
+
+                <div class="header__pages-container">
+                    <a href="./index.html" class="header__page">Главная</a>
+                    <a href="./about.html" class="header__page">О проекте</a>
+                </div>
+            </header>
+
+            <section class="ask">
+                <a href="./index.html" class="ask__page">Главная </a><a href="./analytics.html" class="ask__active">/ Аналитика</a>
+
+                <h2 class="ask__title">Вы спросили: «<span class="ask__request">Путешествия</span>»</h2>
+
+                <p class="ask__statistics">Новостей за неделю: <span class="ask__week-number">34 324</span></p>
+
+                <p class="ask__statistics">Упоминаний в заголовках: <span class="ask__references-number">235</span></p>
+            </section>
+
+            <section class="histogram">
+                <h2 class="histogram__title">Аналитика по дням</h2>
+
+                <div class="histogram__date-ref">
+                    <p class="histogram__legend">Дата (<span class="histogram__mounth">август</span>)</p>
+
+                    <p class="histogram__legend">Кол-во упоминаний</p>
+                </div>
+
+                <div class="histogram__graph">
+                    <div class="histogram__references-number">
+                        <p class="histogram__number">0</p>
+
+                        <p class="histogram__number">25</p>
+
+                        <p class="histogram__number">50</p>
+
+                        <p class="histogram__number">75</p>
+
+                        <p class="histogram__number">100</p>
+                    </div>
+
+                    <div class="histogram__date-column">
+                        <div class="histogram__date">
+                            <p class="histogram__date-number">19,пн</p>
+
+                            <p class="histogram__date-number">20,вт</p>
+
+                            <p class="histogram__date-number">21,ср</p>
+
+                            <p class="histogram__date-number">22,чт</p>
+
+                            <p class="histogram__date-number">23,пт</p>
+
+                            <p class="histogram__date-number">24,сб</p>
+
+                            <p class="histogram__date-number">25,вс</p>
+                        </div>
+
+                        <div class="histogram__column">
+                            <div class="histogram__column-rectangle histogram__column-rectangle_mon">
+                                <p class="histogram__column-ref-number">15</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_tues">
+                                <p class="histogram__column-ref-number">18</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_wed">
+                                <p class="histogram__column-ref-number">11</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_thurs">
+                                <p class="histogram__column-ref-number">39</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_fri">
+                                <p class="histogram__column-ref-number">45</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_sat">
+                                <p class="histogram__column-ref-number">73</p>
+                            </div>
+
+                            <div class="histogram__column-rectangle histogram__column-rectangle_sun">
+                                <p class="histogram__column-ref-number">34</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="histogram__references-number">
+                        <p class="histogram__number">0</p>
+
+                        <p class="histogram__number">25</p>
+
+                        <p class="histogram__number">50</p>
+
+                        <p class="histogram__number">75</p>
+
+                        <p class="histogram__number">100</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer__copyright">&#169; 2019 Supersite</p>
+
+                <div class="footer__link-container">
+                    <a href="./index.html" class="footer__link">Главная</a>
+
+                    <a href="./about.html" class="footer__link">О проекте</a>
+
+                    <a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a>
+                </div>
+            
+                <div class="footer__social-container">
+                    <a href="https://github.com/Skrebets/" class="footer__social" target="_blank"><img src="<%=require('./images/Vector2.svg')%>" alt="Иконка GitHub" class="footer__social-image"></a>
+                </div>
+            </footer>
+        </main>
+        <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+    </body>
+</html>

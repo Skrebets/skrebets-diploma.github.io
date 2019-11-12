@@ -1,0 +1,24 @@
+.ask__page {
+    max-width: 712px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .ask__page {
+        max-width: 700px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .ask__page {
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+.histogram__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1128px;
+    height: 100%;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram__column {
+        width: 571px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__column {
+        width: 208px;
+    }
+}

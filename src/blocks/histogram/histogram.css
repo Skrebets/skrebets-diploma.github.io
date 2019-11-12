@@ -1,0 +1,49 @@
+@import url('./__column-rectangle/histogram__column-rectangle.css');
+@import url('./__column-rectangle_fri/histogram__column-rectangle_fri.css');
+@import url('./__column-rectangle_mon/histogram__column-rectangle_mon.css');
+@import url('./__column-rectangle_sat/histogram__column-rectangle_sat.css');
+@import url('./__column-rectangle_sun/histogram__column-rectangle_sun.css');
+@import url('./__column-rectangle_thurs/histogram__column-rectangle_thurs.css');
+@import url('./__column-rectangle_tues/histogram__column-rectangle_tues.css');
+@import url('./__column-rectangle_wed/histogram__column-rectangle_wed.css');
+@import url('./__column-ref-number/histogram__column-ref-number.css');
+@import url('./__column/histogram__column.css');
+@import url('./__date-column/histogram__date-column.css');
+@import url('./__date-number/histogram__date-number.css');
+@import url('./__date-ref/histogram__date-ref.css');
+@import url('./__date/histogram__date.css');
+@import url('./__graph/histogram__graph.css');
+@import url('./__legend/histogram__legend.css');
+@import url('./__number/histogram__number.css');
+@import url('./__references-number/histogram__references-number.css');
+@import url('./__title/histogram__title.css');
+
+.histogram {
+    max-width: 1440px;
+    height: 866px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    padding-bottom: 72px;
+    padding-left: 104px;
+    box-sizing: border-box;
+    background: #F5F6F7;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram {
+        height: 768px;
+        padding-top: 40px;
+        padding-bottom: 32px;
+        padding-left: 40px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram {
+        height: 478px;
+        padding-top: 24px;
+        padding-bottom: 30px;
+        padding-left: 16px;
+    }
+}

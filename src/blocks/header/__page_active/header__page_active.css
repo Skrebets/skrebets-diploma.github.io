@@ -1,0 +1,5 @@
+.header__page_active {
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    color: #FFFFFF;
+}

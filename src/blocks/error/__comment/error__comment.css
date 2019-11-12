@@ -1,0 +1,18 @@
+.error__comment {
+    max-width: 356px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #B6BCBF;
+}
+
+@media all and (min-width : 347px) and (max-width: 380px) {
+    .error__comment {
+        max-width: 330px;
+    }
+}

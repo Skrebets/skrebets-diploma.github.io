@@ -1,0 +1,13 @@
+.histogram__date-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 450px;
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__date-column {
+        height: 300px;
+    }
+}

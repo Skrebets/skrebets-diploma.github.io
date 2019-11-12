@@ -1,0 +1,25 @@
+@import url('../../../node_modules/swiper/css/swiper.min.css');
+
+.swiper-button-prev {
+    top: 150px;
+}
+
+.swiper-button-prev::after {
+    content: none;
+}
+
+.swiper-button-next {
+    top: 150px;
+}
+
+.swiper-button-next::after {
+    content: none;
+}
+
+.swiper-container {
+    height: 344px;
+}
+
+:root {
+    --swiper-theme-color: #1A1B22;
+}

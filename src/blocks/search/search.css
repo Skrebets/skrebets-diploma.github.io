@@ -1,0 +1,28 @@
+@import url('./__button/search__button.css');
+@import url('./__form/search__form.css');
+@import url('./__input/search__input.css');
+@import url('./__subtitle/search__subtitle.css');
+@import url('./__title/search__title.css');
+
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    height: 576px;
+    background-image: url(../../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .search {
+        height: 400px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .search {
+        height: 536px;
+    }
+}

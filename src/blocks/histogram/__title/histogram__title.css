@@ -1,0 +1,24 @@
+.histogram__title {
+    max-width: 1232px;
+    margin-bottom: 48px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram__title {
+        max-width: 688px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__title {
+        max-width: 288px;
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+}
