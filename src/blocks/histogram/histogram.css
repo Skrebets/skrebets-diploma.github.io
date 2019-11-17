@@ -30,7 +30,16 @@
     background: #F5F6F7;
 }
 
-@media all and (min-width : 768px) and (max-width: 1439px) {
+@media all and (min-width : 1000px) and (max-width: 1439px) {
+    .histogram {
+        height: 768px;
+        padding-top: 40px;
+        padding-bottom: 32px;
+        padding-left: 80px;
+    }
+}
+
+@media all and (min-width : 768px) and (max-width: 999px) {
     .histogram {
         height: 768px;
         padding-top: 40px;
@@ -39,9 +48,18 @@
     }
 }
 
-@media all and (min-width : 320px) and (max-width: 767px) {
+@media all and (min-width : 500px) and (max-width: 767px) {
     .histogram {
-        height: 478px;
+        height: 510px;
+        padding-top: 24px;
+        padding-bottom: 30px;
+        padding-left: 25px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 499px) {
+    .histogram {
+        height: 510px;
         padding-top: 24px;
         padding-bottom: 30px;
         padding-left: 16px;

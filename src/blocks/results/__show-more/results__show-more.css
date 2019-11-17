@@ -13,8 +13,8 @@
     border-radius: 80px;
 }
 
-.results__show-more:active {
-    opacity: 0.9;
+.results__show-more:hover {
+    background: #F5F5F5;
 }
 
 @media all and (min-width : 1000px) and (max-width: 1439px) {

@@ -1,6 +1,6 @@
 # skrebets-diploma.github.io
 
-*version 0.0.1*
+*version 0.0.2*
 
 ## Link
 
@@ -9,6 +9,26 @@ https://skrebets.github.io/skrebets-diploma.github.io/
 ## Purpose
 
 The main porpose of this project is to search news with inputted themes and explore their popularity.
+
+## How to use
+
+1. Download **node.js** from https://nodejs.org/en/download/ and install.
+
+2. Clone this repo by using this command:
+```bash
+git clone https://github.com/Skrebets/skrebets-diploma.github.io.git
+```
+and checkout the tagged release you'd like to use.
+
+3. Check webpack configuration.
+
+4. To run project on local server use this commands:
+```bash
+npm run build
+npm run dev
+```
+this project also supports hot-reload, so you can edit code in real time while you're on server.
+
 
 ## Description
 

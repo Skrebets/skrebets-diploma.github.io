@@ -17,4 +17,30 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: false,
+          loop: true,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            centeredSlides: false,
+            loop: true,
+        },
+        1000: {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: true,
+            loop: true,
+        },
+        1440: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          centeredSlides: true,
+          loop: true,
+        },
+    }
 });

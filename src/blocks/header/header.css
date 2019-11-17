@@ -4,6 +4,7 @@
 @import url('./__pages-container/header__pages-container.css');
 @import url('./__page_active_black/header__page_active_black.css');
 @import url('./__title_black/header__title_black.css');
+@import url('./__page_black/header__page_black.css');
 
 .header {
     padding-left: 104px;

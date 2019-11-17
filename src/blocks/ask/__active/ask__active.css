@@ -7,3 +7,9 @@
     text-decoration: none;
     color: #B6BCBF;
 }
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .ask__active {
+        display: none;
+    }
+}

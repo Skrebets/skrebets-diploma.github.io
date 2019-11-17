@@ -11,7 +11,7 @@
     text-decoration: none;
 }
 
-.header__page:active {
+.header__page:hover {
     font-weight: bold;
     color: #FFFFFF;
 }
