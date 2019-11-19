@@ -1,0 +1,17 @@
+.histogram__column-rectangle {
+    max-width: 1128px;
+    height: 24px;
+    background: #2F71E5;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram__column-rectangle {
+        max-width: 571px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__column-rectangle {
+        max-width: 208px;
+    }
+}

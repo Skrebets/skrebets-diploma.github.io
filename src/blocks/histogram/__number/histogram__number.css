@@ -1,0 +1,24 @@
+.histogram__number {
+    max-width: 80px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .histogram__number {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__number {
+        display: none;
+    }
+}

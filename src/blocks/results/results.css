@@ -1,0 +1,23 @@
+@import url('./__analytics/results__analytics.css');
+@import url('./__card-container/results__card-container.css');
+@import url('./__card-date/results__card-date.css');
+@import url('./__card-description/results__card-description.css');
+@import url('./__card-pic/results__card-pic.css');
+@import url('./__card-portal/results__card-portal.css');
+@import url('./__card-text/results__card-text.css');
+@import url('./__card-title/results__card-title.css');
+@import url('./__card/results__card.css');
+@import url('./__show-more/results__show-more.css');
+@import url('./__title-container/results__title-container.css');
+@import url('./__title/results__title.css');
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F5F6F7;
+}

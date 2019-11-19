@@ -1,0 +1,12 @@
+.header__pages-container {
+    width: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .header__pages-container {
+        width: 170px;
+    }
+}

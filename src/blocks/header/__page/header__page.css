@@ -1,0 +1,24 @@
+.header__page {
+    max-width: 90px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 65px;
+    color: #B6BCBF;
+    text-decoration: none;
+}
+
+.header__page:hover {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .header__page {
+        font-size: 18px;
+        line-height: 58px;
+    }
+}

@@ -1,0 +1,42 @@
+@import url('./__about/author__about.css');
+@import url('./__avatar/author__avatar.css');
+@import url('./__container/author__container.css');
+@import url('./__title/author__title.css');
+
+.author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 1440px;
+    max-height: 624px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (min-width : 1000px) and (max-width: 1439px) {
+    .author {
+        justify-content: center;
+        max-height: 500px;
+    }
+}
+
+@media all and (min-width : 768px) and (max-width: 999px) {
+    .author {
+        max-height: 312px;
+    }
+}
+
+@media all and (min-width : 345px) and (max-width: 767px) {
+    .author {
+        flex-direction: column;
+        align-items: center;
+        max-height: 700px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 344px) {
+    .author {
+        flex-direction: column;
+        max-height: 700px;
+    }
+}

@@ -1,0 +1,15 @@
+.ask__active {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #B6BCBF;
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .ask__active {
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+@import url('./__title/header__title.css');
+@import url('./__page/header__page.css');
+@import url('./__page_active/header__page_active.css');
+@import url('./__pages-container/header__pages-container.css');
+@import url('./__page_active_black/header__page_active_black.css');
+@import url('./__title_black/header__title_black.css');
+@import url('./__page_black/header__page_black.css');
+
+.header {
+    padding-left: 104px;
+    padding-right: 104px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    max-height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media all and (min-width : 1000px) and (max-width: 1439px) {
+    .header {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media all and (min-width : 768px) and (max-width: 999px) {
+    .header {
+        padding-left: 41px;
+        padding-right: 41px;
+    }
+}
+
+@media all and (min-width : 500px) and (max-width: 767px) {
+    .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 499px) {
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

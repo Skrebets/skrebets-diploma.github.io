@@ -1,0 +1,14 @@
+.histogram__date-ref {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: 24px;
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .histogram__date-ref {
+        width: 288px;
+        margin-bottom: 20px;
+    }
+}

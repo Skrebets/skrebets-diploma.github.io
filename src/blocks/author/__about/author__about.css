@@ -1,0 +1,28 @@
+.author__about {
+    margin-top: 24px;
+    margin-bottom: 0px;
+    max-width: 600px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media all and (min-width : 768px) and (max-width: 1439px) {
+    .author__about {
+        margin-top: 16px;
+        margin-bottom: 0px;
+        max-width: 424px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 767px) {
+    .author__about {
+        margin-top: 16px;
+        margin-bottom: 44px;
+        margin-left: 16px;
+        max-width: 288px;
+    }
+}

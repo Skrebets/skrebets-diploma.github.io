@@ -1,0 +1,37 @@
+.histogram__graph {
+    width: 1232px;
+    height: 588px;
+    border-top: 1px solid #1A1B22;
+}
+
+@media all and (min-width : 1000px) and (max-width: 1439px) {
+    .histogram__graph {
+        width: 900px;
+        height: 550px;
+    }
+}
+
+@media all and (min-width : 768px) and (max-width: 999px) {
+    .histogram__graph {
+        width: 688px;
+        height: 550px;
+    }
+}
+
+@media all and (min-width : 500px) and (max-width: 767px) {
+    .histogram__graph {
+        width: 400px;
+        height: 310px;
+        box-sizing: border-box;
+        padding-top: 18px;
+    }
+}
+
+@media all and (min-width : 320px) and (max-width: 499px) {
+    .histogram__graph {
+        width: 288px;
+        height: 310px;
+        box-sizing: border-box;
+        padding-top: 18px;
+    }
+}
