@@ -12,32 +12,25 @@
 
 @media all and (min-width : 1000px) and (max-width: 1439px) {
     .search__form {
-        font-size: 16px;
-        line-height: 22px;
         max-width: 500px;
     }
 }
 
 @media all and (min-width : 768px) and (max-width: 999px) {
     .search__form {
-        font-size: 16px;
-        line-height: 22px;
         max-width: 385px;
     }
 }
 
 @media all and (min-width : 500px) and (max-width: 767px) {
     .search__form {
-        font-size: 16px;
-        line-height: 22px;
         max-width: 325px;
     }
 }
 
 @media all and (min-width : 320px) and (max-width: 499px) {
     .search__form {
-        font-size: 16px;
-        line-height: 22px;
         max-width: 285px;
+        margin-bottom: 32px;
     }
 }

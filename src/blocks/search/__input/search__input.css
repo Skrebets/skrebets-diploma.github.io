@@ -18,7 +18,6 @@
 
 @media all and (min-width : 768px) and (max-width: 999px) {
     .search__input {
-        padding-left: 24px;
         width: 385px;
         height: 56px;
     }

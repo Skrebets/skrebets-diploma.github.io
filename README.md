@@ -1,6 +1,6 @@
 # skrebets-diploma.github.io
 
-*version 0.0.2*
+*version 0.0.3*
 
 ## Link
 
@@ -127,10 +127,6 @@ Adaptive layout involves **media queries**. They are useful when you want to mod
     }
 }
 ```
-
-## Things to improve
-
-Add JavaScript functionality.
 
 ## Technologies
 

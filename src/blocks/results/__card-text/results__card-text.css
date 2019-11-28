@@ -9,6 +9,12 @@
     font-size: 16px;
     line-height: 22px;
     color: #1A1B22;
+    position: relative;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 @media all and (min-width : 1000px) and (max-width: 1439px) {
@@ -17,12 +23,7 @@
         margin-bottom: 12px;
         margin-left: 16px;
         max-width: 250px;
-        position: relative;
-	    display: -webkit-box;
 	    -webkit-line-clamp: 4;
-	    -webkit-box-orient: vertical;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
     }
 }
 
@@ -32,12 +33,7 @@
         margin-bottom: 12px;
         margin-left: 16px;
         max-width: 192px;
-        position: relative;
-	    display: -webkit-box;
 	    -webkit-line-clamp: 4;
-	    -webkit-box-orient: vertical;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
     }
 }
 
@@ -47,11 +43,6 @@
         margin-bottom: 5px;
         margin-left: 16px;
         max-width: 256px;
-        position: relative;
-	    display: -webkit-box;
 	    -webkit-line-clamp: 4;
-	    -webkit-box-orient: vertical;
-	    overflow: hidden;
-	    text-overflow: ellipsis;
     }
 }
