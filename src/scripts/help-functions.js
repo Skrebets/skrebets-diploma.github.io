@@ -1,3 +1,5 @@
+import {showMoreButton} from '../scripts/results-cardList';
+
 export function getMonthName(string) {      // Функция, которая переводит номер месяца в название
 
     let month = string.substring(5, 7);
@@ -45,7 +47,7 @@ export function getMonthName(string) {      // Функция, которая п
 }
 
 export function getDayAgo(numberOfDays, timestampDate) {        // Функция для расчета дат за numberOfDays дней до текущей даты
-    let dayAgo = new Date(timestampDate - numberOfDays * 86400000);
+    const dayAgo = new Date(timestampDate - numberOfDays * 86400000);
 
     return dayAgo;
 }
@@ -90,6 +92,7 @@ export function showPreloader(isLoading) {      // Функция, котора�
 
     if (isLoading) {
         preloaderSpinner.classList.add('results__preloader_active');
+        showMoreButton.classList.remove('results__show-more_active');
     } else {
         preloaderSpinner.classList.remove('results__preloader_active');
     }

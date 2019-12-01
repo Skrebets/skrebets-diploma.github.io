@@ -13,6 +13,11 @@ const apiGit = new ApiGit({
     }
 })
 
-apiGit.getCommits().then((result) => {
+apiGit.getCommits()
+  .then((result) => {
     return new CommitCardList(swiperContainer, result);
+})
+
+  .catch((error) => {
+  console.log(error);
 })

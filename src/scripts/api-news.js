@@ -15,20 +15,13 @@ export class ApiNews {
         })
             .then((res) => {
                 if (res.ok) {
-                return res.json()
+
+                showPreloader(false);
+                
+                return res.json();
             }
     
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
-
-            .catch((err) => {
-                console.log(err);
-
-                resultsErrorRequest.classList.add('results__error_active');
-            })
-            
-            .finally(() => {
-                showPreloader(false);
-            });
     }
 }
