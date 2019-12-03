@@ -8,8 +8,20 @@
 @import url('./__card-title/results__card-title.css');
 @import url('./__card/results__card.css');
 @import url('./__show-more/results__show-more.css');
+@import url('./__show-more_active/results__show-more_active.css');
 @import url('./__title-container/results__title-container.css');
 @import url('./__title/results__title.css');
+@import url('./__preloader-comment/results__preloader-comment.css');
+@import url('./__preloader-spinner/results__preloader-spinner.css');
+@import url('./__preloader/results__preloader.css');
+@import url('./__preloader_active/results__preloader_active.css');
+@import url('./__error-comment/results__error-comment.css');
+@import url('./__error-pic/results__error-pic.css');
+@import url('./__error-title/results__error-title.css');
+@import url('./__error/results__error.css');
+@import url('./__error_active/results__error_active.css');
+@import url('./__title-container_active/results__title-container_active.css');
+@import url('./__card-container_active/results__card-container_active.css');
 
 .results {
     display: flex;
