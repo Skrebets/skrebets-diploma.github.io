@@ -1,6 +1,6 @@
 # skrebets-diploma.github.io
 
-*version 0.0.4*
+*version 0.0.5*
 
 ## Link
 
