@@ -8,36 +8,48 @@ import {showMoreButton} from './scripts/results-cardList';
 import {resultsCardList} from './scripts/results-cardList';
 import {showPreloader} from './scripts/help-functions';
 import {moreCards} from './scripts/results-cardList';
+import {titleContainer} from './scripts/results-cardList';
 
 
 /* Запрос к api и отрисовка карточек */
 
 
+const keyApi = '2a167f3597744000b755933294736cac';
+
 const form = document.forms.search;
 
 const formError = document.querySelector('.search__error');
 const searchButton = document.querySelector('.search__button');
+const inputSearch = document.querySelector('.search__input');
+
+const numberOfDays = 7;
+
+const millisecondsInDay = 86400000;
 
 const now = new Date();
 
 const nowTimestamp = +new Date();
-const sevenAgoTimestamp = nowTimestamp - 7 * 86400000;
+const sevenAgoTimestamp = nowTimestamp - numberOfDays * millisecondsInDay;
 const sevenAgo = new Date(sevenAgoTimestamp);
 
-function revealStorgeCads(storageContent) {
-    if (typeof storageContent === 'undefined') {
-        document.querySelector('.results__title-container').classList.remove('results__title-container_active');
-        document.querySelector('.results__card-container').classList.remove('results__card-container_active');
+function revealStorgeCads(storageContent, storageKey) {
+    if (storageContent === null) {
+        titleContainer.classList.remove('results__title-container_active');
+        resultsCardList.classList.remove('results__card-container_active');
         resultsErrorRequest.classList.remove('results__error_active');
         resultsErrorSearch.classList.remove('results__error_active');
     } else {
         const resultArray = JSON.parse(storageContent); // Получаем result из localStorage
 
+        const keyWord = storageKey; // Получаем ключевое слово из localStorage
+
+        inputSearch.value = keyWord;
+
         new CardList(resultsCardList).getStorageCards(resultArray);
     }
 }
 
-revealStorgeCads(localStorage.resultArray);
+revealStorgeCads(localStorage.getItem('resultArray'), localStorage.getItem('keyWord'));
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -59,8 +71,8 @@ form.addEventListener('submit', function(event) {
     renderSearchButton(formError.textContent);
 
     if (renderSearchButton(formError.textContent)) {
-        document.querySelector('.results__title-container').classList.add('results__title-container_active');
-        document.querySelector('.results__card-container').classList.add('results__card-container_active');
+        titleContainer.classList.add('results__title-container_active');
+        resultsCardList.classList.add('results__card-container_active');
 
         const url = 'https://newsapi.org/v2/everything?' +
                 `q=${formInput}&` +
@@ -68,15 +80,15 @@ form.addEventListener('submit', function(event) {
                 `to=${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}&` +
                 'sortBy=popularity&' +
                 'pageSize=100&' +
-                'apiKey=2a167f3597744000b755933294736cac';
+                `apiKey=${keyApi}`;
         
         const apiNews = new ApiNews(url);
 
         apiNews.getNews()
             .then((result) => {
-                localStorage.resultArray = JSON.stringify(result); // Отправили result в localStorage
+                localStorage.setItem('resultArray', JSON.stringify(result)); // Отправили result в localStorage
 
-                localStorage.keyWord = formInput;
+                localStorage.setItem('keyWord', formInput); // Отправили keyWord в localStorage
                     
                 showMoreButton.addEventListener('click', moreCards(result));
 

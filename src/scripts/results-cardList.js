@@ -7,6 +7,8 @@ export const showMoreButton = document.querySelector('.results__show-more');
 
 export const resultsCardList = document.querySelector('.results__card-container');
 
+export const titleContainer = document.querySelector('.results__title-container');
+
 /* Кнопка показать больше */
 
 export const moreCards = (arr) => (event) => {
@@ -67,12 +69,12 @@ export class CardList {
 
     getStorageCards(arr) {
         if (arr['articles'].length === 0) {
-            document.querySelector('.results__card-container').classList.remove('results__card-container_active');
-            document.querySelector('.results__title-container').classList.add('results__title-container_active');
+            resultsCardList.classList.remove('results__card-container_active');
+            titleContainer.classList.add('results__title-container_active');
             resultsErrorSearch.classList.add('results__error_active');
         } else {
-            document.querySelector('.results__card-container').classList.add('results__card-container_active');
-            document.querySelector('.results__title-container').classList.add('results__title-container_active');
+            resultsCardList.classList.add('results__card-container_active');
+            titleContainer.classList.add('results__title-container_active');
             resultsErrorSearch.classList.remove('results__error_active');
     
             showMoreButton.addEventListener('click', moreCards(arr));

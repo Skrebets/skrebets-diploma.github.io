@@ -11,10 +11,11 @@
     color: #1A1B22;
     background: #FFFFFF;
     border-radius: 80px;
+    border: none;
 }
 
 .results__show-more_active:hover {
-    background: #F5F5F5;
+    background: #F5F6F7;
 }
 
 @media all and (min-width : 1000px) and (max-width: 1439px) {
