@@ -47,7 +47,9 @@ export function getMonthName(string) {      // Функция, которая п
 }
 
 export function getDayAgo(numberOfDays, timestampDate) {        // Функция для расчета дат за numberOfDays дней до текущей даты
-    const dayAgo = new Date(timestampDate - numberOfDays * 86400000);
+    const millisecondsInDay = 86400000;
+
+    const dayAgo = new Date(timestampDate - numberOfDays * millisecondsInDay);
 
     return dayAgo;
 }

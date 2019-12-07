@@ -11,7 +11,23 @@ const articleWeekNumber = document.querySelector('.ask__week-number');
 
 const titleReferences = document.querySelector('.ask__references-number');
 
-if (typeof localStorage.resultArray === 'undefined') {
+const thisDayColumnNumber = document.querySelector('.histogram__column-ref-number_this-day');
+const sixthDayColumnNumber = document.querySelector('.histogram__column-ref-number_sixth-day');
+const fifthDayColumnNumber = document.querySelector('.histogram__column-ref-number_fifth-day');
+const fouthDayColumnNumber = document.querySelector('.histogram__column-ref-number_fouth-day');
+const thirdDayColumnNumber = document.querySelector('.histogram__column-ref-number_third-day');
+const secondDayColumnNumber = document.querySelector('.histogram__column-ref-number_second-day');
+const firstDayColumnNumber = document.querySelector('.histogram__column-ref-number_first-day');
+
+const thisDayColumnRectangle = document.querySelector('.histogram__column-rectangle_this-day');
+const sixthDayColumnRectangle = document.querySelector('.histogram__column-rectangle_sixth-day');
+const fifthDayColumnRectangle = document.querySelector('.histogram__column-rectangle_fifth-day');
+const fouthDayColumnRectangle = document.querySelector('.histogram__column-rectangle_fouth-day');
+const thirdDayColumnRectangle = document.querySelector('.histogram__column-rectangle_third-day');
+const secondDayColumnRectangle = document.querySelector('.histogram__column-rectangle_second-day');
+const firstDayColumnRectangle = document.querySelector('.histogram__column-rectangle_first-day');
+
+if (localStorage.getItem('resultArray') === null) {
     askTitle.textContent = '';
 
     articleWeekNumber.textContent = '0';
@@ -22,37 +38,37 @@ if (typeof localStorage.resultArray === 'undefined') {
     /* Вписываем нули в гистограмму и ставим им черный цвет */
 
 
-    document.querySelector('.histogram__column-ref-number_this-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_sixth-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_fifth-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_fouth-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_third-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_second-day').textContent = '0';
-    document.querySelector('.histogram__column-ref-number_first-day').textContent = '0';
+    thisDayColumnNumber.textContent = '0';
+    sixthDayColumnNumber.textContent = '0';
+    fifthDayColumnNumber.textContent = '0';
+    fouthDayColumnNumber.textContent = '0';
+    thirdDayColumnNumber.textContent = '0';
+    secondDayColumnNumber.textContent = '0';
+    firstDayColumnNumber.textContent = '0';
 
-    document.querySelector('.histogram__column-ref-number_this-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_sixth-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_fifth-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_fouth-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_third-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_second-day').style.color = 'black';
-    document.querySelector('.histogram__column-ref-number_first-day').style.color = 'black';
+    thisDayColumnNumber.style.color = 'black';
+    sixthDayColumnNumber.style.color = 'black';
+    fifthDayColumnNumber.style.color = 'black';
+    fouthDayColumnNumber.style.color = 'black';
+    thirdDayColumnNumber.style.color = 'black';
+    secondDayColumnNumber.style.color = 'black';
+    firstDayColumnNumber.style.color = 'black';
 
 
     /* Обнуляем длину столбцов */
 
 
-    document.querySelector('.histogram__column-rectangle_this-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_sixth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_fifth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_fouth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_third-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_second-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_first-day').style.width = '0%';
+    thisDayColumnRectangle.style.width = '0%';
+    sixthDayColumnRectangle.style.width = '0%';
+    fifthDayColumnRectangle.style.width = '0%';
+    fouthDayColumnRectangle.style.width = '0%';
+    thirdDayColumnRectangle.style.width = '0%';
+    secondDayColumnRectangle.style.width = '0%';
+    firstDayColumnRectangle.style.width = '0%';
 } else {
-    const resultArray = JSON.parse(localStorage.resultArray); // Получаем result из localStorage
+    const resultArray = JSON.parse(localStorage.getItem('resultArray')); // Получаем result из localStorage
 
-    const keyWord = localStorage.keyWord; // Получаем ключевое слово из localStorage
+    const keyWord = localStorage.getItem('keyWord') // Получаем ключевое слово из localStorage
 
 
     /* Вписываем ключевое слово в "Вы спросили" */
@@ -120,7 +136,7 @@ if (typeof localStorage.resultArray === 'undefined') {
 
 
     function getKeyArray(array, key) {
-        let arr = [];
+        const arr = [];
 
         for (let i = 0; i < array.length; i++) {
             arr.push(array[i][key].toLowerCase());
@@ -157,11 +173,13 @@ if (typeof localStorage.resultArray === 'undefined') {
 
 
     function separateArticlesForDays(array, date) {
-        let arrDay = [];
+        const arrDay = [];
 
         for (let i = 0; i < array['articles'].length; i++) {
-            
-            array['articles'][i]['publishedAt'].substring(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` ? arrDay.push(array['articles'][i]) : false;
+
+            if (array['articles'][i]['publishedAt'].substring(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` || array['articles'][i]['publishedAt'].substring(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-0${date.getDate()}`) {
+                arrDay.push(array['articles'][i]);
+            }
 
         }
 
@@ -192,31 +210,31 @@ if (typeof localStorage.resultArray === 'undefined') {
     /* Вписываем количество упоминаний ключевого слова в строках в гистограмму */
 
 
-    document.querySelector('.histogram__column-ref-number_this-day').textContent = countKeyReferences(stringThisDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_sixth-day').textContent = countKeyReferences(stringSixthDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_fifth-day').textContent = countKeyReferences(stringFifthDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_fouth-day').textContent = countKeyReferences(stringFouthDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_third-day').textContent = countKeyReferences(stringThirdDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_second-day').textContent = countKeyReferences(stringSecondDay, keyWord);
-    document.querySelector('.histogram__column-ref-number_first-day').textContent = countKeyReferences(stringFirstDay, keyWord);
+    thisDayColumnNumber.textContent = countKeyReferences(stringThisDay, keyWord);
+    sixthDayColumnNumber.textContent = countKeyReferences(stringSixthDay, keyWord);
+    fifthDayColumnNumber.textContent = countKeyReferences(stringFifthDay, keyWord);
+    fouthDayColumnNumber.textContent = countKeyReferences(stringFouthDay, keyWord);
+    thirdDayColumnNumber.textContent = countKeyReferences(stringThirdDay, keyWord);
+    secondDayColumnNumber.textContent = countKeyReferences(stringSecondDay, keyWord);
+    firstDayColumnNumber.textContent = countKeyReferences(stringFirstDay, keyWord);
 
-    changeTextColor(countKeyReferences(stringThisDay, keyWord), document.querySelector('.histogram__column-ref-number_this-day'));
-    changeTextColor(countKeyReferences(stringSixthDay, keyWord), document.querySelector('.histogram__column-ref-number_sixth-day'));
-    changeTextColor(countKeyReferences(stringFifthDay, keyWord), document.querySelector('.histogram__column-ref-number_fifth-day'));
-    changeTextColor(countKeyReferences(stringFouthDay, keyWord), document.querySelector('.histogram__column-ref-number_fouth-day'));
-    changeTextColor(countKeyReferences(stringThirdDay, keyWord), document.querySelector('.histogram__column-ref-number_third-day'));
-    changeTextColor(countKeyReferences(stringSecondDay, keyWord), document.querySelector('.histogram__column-ref-number_second-day'));
-    changeTextColor(countKeyReferences(stringFirstDay, keyWord), document.querySelector('.histogram__column-ref-number_first-day'));
+    changeTextColor(countKeyReferences(stringThisDay, keyWord), thisDayColumnNumber);
+    changeTextColor(countKeyReferences(stringSixthDay, keyWord), sixthDayColumnNumber);
+    changeTextColor(countKeyReferences(stringFifthDay, keyWord), fifthDayColumnNumber);
+    changeTextColor(countKeyReferences(stringFouthDay, keyWord), fouthDayColumnNumber);
+    changeTextColor(countKeyReferences(stringThirdDay, keyWord), thirdDayColumnNumber);
+    changeTextColor(countKeyReferences(stringSecondDay, keyWord), secondDayColumnNumber);
+    changeTextColor(countKeyReferences(stringFirstDay, keyWord), firstDayColumnNumber);
 
 
     /* Управляем длинной столбцов гистограммы */
 
 
-    document.querySelector('.histogram__column-rectangle_this-day').style.width = `${countKeyReferences(stringThisDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_sixth-day').style.width = `${countKeyReferences(stringSixthDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_fifth-day').style.width = `${countKeyReferences(stringFifthDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_fouth-day').style.width = `${countKeyReferences(stringFouthDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_third-day').style.width = `${countKeyReferences(stringThirdDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_second-day').style.width = `${countKeyReferences(stringSecondDay, keyWord)}%`;
-    document.querySelector('.histogram__column-rectangle_first-day').style.width = `${countKeyReferences(stringFirstDay, keyWord)}%`;
+    thisDayColumnRectangle.style.width = `${countKeyReferences(stringThisDay, keyWord)}%`;
+    sixthDayColumnRectangle.style.width = `${countKeyReferences(stringSixthDay, keyWord)}%`;
+    fifthDayColumnRectangle.style.width = `${countKeyReferences(stringFifthDay, keyWord)}%`;
+    fouthDayColumnRectangle.style.width = `${countKeyReferences(stringFouthDay, keyWord)}%`;
+    thirdDayColumnRectangle.style.width = `${countKeyReferences(stringThirdDay, keyWord)}%`;
+    secondDayColumnRectangle.style.width = `${countKeyReferences(stringSecondDay, keyWord)}%`;
+    firstDayColumnRectangle.style.width = `${countKeyReferences(stringFirstDay, keyWord)}%`;
 }
